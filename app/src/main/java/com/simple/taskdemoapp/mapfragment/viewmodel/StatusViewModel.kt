@@ -1,8 +1,10 @@
-package com.simple.taskdemoapp
+package com.simple.taskdemoapp.mapfragment.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.simple.taskdemoapp.mapfragment.model.StatusModel
+import com.simple.taskdemoapp.mapfragment.repository.StatusRepository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

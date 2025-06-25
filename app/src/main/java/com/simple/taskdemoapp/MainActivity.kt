@@ -3,6 +3,8 @@ package com.simple.taskdemoapp
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.simple.taskdemoapp.homefragment.HomeFragment
+import com.simple.taskdemoapp.mapfragment.MapFragment
 
 class MainActivity : AppCompatActivity() {
 

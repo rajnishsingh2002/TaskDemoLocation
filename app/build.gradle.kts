@@ -60,4 +60,9 @@ dependencies {
 // Lifecycle
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+
+    implementation ("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+
+    implementation ("com.google.maps.android:android-maps-utils:2.3.0")
 }

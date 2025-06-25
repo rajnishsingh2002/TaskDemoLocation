@@ -1,4 +1,4 @@
-package com.simple.taskdemoapp
+package com.simple.taskdemoapp.mapfragment.repository
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
