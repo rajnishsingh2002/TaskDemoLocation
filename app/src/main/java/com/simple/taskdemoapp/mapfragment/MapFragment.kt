@@ -18,12 +18,13 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.maps.model.PolylineOptions
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.simple.taskdemoapp.BaseFragment
 import com.simple.taskdemoapp.R
 import com.simple.taskdemoapp.mapfragment.adapter.StatusAdapter
 import com.simple.taskdemoapp.mapfragment.model.StatusModel
 import com.simple.taskdemoapp.mapfragment.viewmodel.StatusViewModel
 
-class MapFragment : Fragment(), OnMapReadyCallback {
+class MapFragment : BaseFragment(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
@@ -42,9 +43,8 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         bottomSheetBehavior.peekHeight = 150
         bottomSheetBehavior.isFitToContents = false
         bottomSheetBehavior.expandedOffset = 100
-        bottomSheetBehavior.halfExpandedRatio = 0.7f
+//        bottomSheetBehavior.halfExpandedRatio = 0.7f
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
-
 
 
         // Setup RecyclerView
@@ -62,12 +62,10 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         viewModel.fetchStatus()
 
 
-
-
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
-
+        showToast("map ke under aa gye")
 
         return view
     }
@@ -109,7 +107,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-      }
+    }
 
 
 }

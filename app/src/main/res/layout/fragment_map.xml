@@ -15,6 +15,34 @@ android:layout_height="match_parent">
     android:layout_height="match_parent" />
 
 <!-- Bottom Sheet -->
-    <include layout="@layout/activity_maps" />
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        android:id="@+id/bottom_sheet_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bottom_sheet_background"
+        android:clipToOutline="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Nearby Places"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="#FF9800"
+            android:textColor="#FFFFFF" />
+
+        <!-- RecyclerView for List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mapRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
